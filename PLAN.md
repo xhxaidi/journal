@@ -80,6 +80,9 @@ Candidates:
 
 Done:
 
-- (none yet)
+- **Sombra** (`src/projects/sombra.tsx`), pages 04–05:
+  - live: https://sombra.hasanzaidi.com · code: https://github.com/xhxaidi/sombra-landing-page
+  - framed ASCII black-hole print, index card, cell-foam lens, build checklist, clipped-on wallet phone, privacy receipt, quantum-fridge print, access-card links
+  - media loads only when its spread is open or next to the open one (`Shot` in `src/bits.tsx`)
 
 Not in scope: deploying to hasanzaidi.com. Add a Phase 4 if you want it.

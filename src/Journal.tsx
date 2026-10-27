@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from 'react'
-import { at, Nav, type Page } from './bits'
+import { at, Nav, Near, type Page } from './bits'
 import { AboutLeft, AboutRight, BackCover, ContactLeft, Cover, Endpaper, Opening } from './pages'
 import { projects } from './projects'
 
@@ -101,6 +101,7 @@ function Book() {
 
   const lo = Math.min(s.from, s.turned), hi = Math.max(s.from, s.turned), fwd = s.turned > s.from
   const moving = (i: number) => i >= lo && i < hi
+  const near = (spread: number) => Math.abs(spread - (s.turned - 1)) <= 1
   const leaf = (i: number): CSSProperties => {
     const on = i < s.turned
     const delay = moving(i) ? (fwd ? i - lo : hi - 1 - i) * 0.14 : 0
@@ -146,7 +147,7 @@ function Book() {
               <div aria-hidden="true" className="airmail" style={at(2, 750, { width: 598, height: 8, transform: 'translateZ(-2px)', opacity: s.turned > 1 ? 1 : 0, transition: 'opacity .3s' })} />
 
               <div inert={s.turned !== N} style={at(600, 0, { width: 600, height: 750, overflow: 'hidden', transform: 'translateZ(-1px)' })}>
-                <Last n={2 * N - 1} />
+                <Near.Provider value={near(N - 1)}><Last n={2 * N - 1} /></Near.Provider>
               </div>
 
               {SPREADS.map((sp, i) => {
@@ -154,11 +155,11 @@ function Book() {
                 return (
                   <div key={sp.id} style={leaf(i)}>
                     <div className="face" inert={s.turned !== i}>
-                      <Front n={2 * i - 1} />
+                      <Near.Provider value={near(i - 1)}><Front n={2 * i - 1} /></Near.Provider>
                       <div aria-hidden="true" style={shade(i, false)} />
                     </div>
                     <div className="face back" inert={s.turned !== i + 1}>
-                      <sp.Left n={2 * i} />
+                      <Near.Provider value={near(i)}><sp.Left n={2 * i} /></Near.Provider>
                       <div aria-hidden="true" style={shade(i, true)} />
                     </div>
                   </div>

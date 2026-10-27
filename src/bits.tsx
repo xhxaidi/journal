@@ -1,4 +1,4 @@
-import { createContext, useContext, type CSSProperties, type FC, type ReactNode } from 'react'
+import { createContext, useContext, useState, type CSSProperties, type FC, type ReactNode } from 'react'
 
 export type Page = FC<{ n: number }>
 export type Project = { id: string; tab: string; color: string; Left: Page; Right: Page }
@@ -28,6 +28,19 @@ export function Turn({ close, style, children }: { close?: boolean; style: CSSPr
       {children}
     </button>
   )
+}
+
+// Every page is in the DOM at once, so media waits until its spread is open or next to it;
+// otherwise the first visit downloads every project's GIFs.
+export const Near = createContext(true)
+
+export function Shot({ src, alt, style }: { src: string; alt: string; style: CSSProperties }) {
+  const near = useContext(Near)
+  const [seen, setSeen] = useState(near)
+  if (near && !seen) setSeen(true)
+  return seen
+    ? <img src={src} alt={alt} loading="lazy" decoding="async" style={{ display: 'block', objectFit: 'cover', ...style }} />
+    : <div role="img" aria-label={alt} style={style} />
 }
 
 export function Paper({ side, n, children }: { side: 'left' | 'right'; n: number; children: ReactNode }) {
