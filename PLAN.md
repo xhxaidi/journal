@@ -47,7 +47,7 @@ opening, arrow keys, tabs, deep link (`/#dilli`), close and replay.
 
 Decisions and open items:
 
-- With no `#hash` in the URL, the journal opens on About. The desktop cover opens straight to P. 02–03, and mobile scrolls to About. A hashed link still opens its own spread.
+- With no `#hash` in the URL, the journal opens on page one: the endpaper and P. 01. A hashed link opens its own spread.
 
 - Headings use Permanent Marker, the main prototype's font. Hidayatullah is still possible if you send its font file.
 - The About polaroid shows `public/images/about/look-what-ive-cooked.jpg`, captioned "look what I've cooked".

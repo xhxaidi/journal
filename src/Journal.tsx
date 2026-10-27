@@ -16,9 +16,8 @@ const SPREADS: Spread[] = [
 const N = SPREADS.length
 const TURN = 1.3 // seconds per page turn
 const pad = (n: number) => String(n).padStart(2, '0')
-const ABOUT = SPREADS.findIndex((s) => s.id === 'about') + 1
-// a #hash picks the spread; with none, the journal opens on About
-const spreadFromHash = () => SPREADS.findIndex((s) => '#' + s.id === location.hash) + 1 || ABOUT
+// a #hash picks the spread; with none, the journal opens on page one
+const spreadFromHash = () => SPREADS.findIndex((s) => '#' + s.id === location.hash) + 1 || 1
 
 const onResize = (cb: () => void) => (addEventListener('resize', cb), () => removeEventListener('resize', cb))
 const small = matchMedia('(max-width: 899px), (prefers-reduced-motion: reduce)')
@@ -275,7 +274,6 @@ function Dressing() {
 // mobile and reduced motion: every page stacked, tabs as a strip
 function Stack() {
   const k = useSyncExternalStore(onResize, () => Math.min(1, (innerWidth - 24) / 650))
-  useEffect(() => { if (!location.hash) document.getElementById('about')?.scrollIntoView() }, [])
   const nav = {
     next: (from: HTMLElement) => from.closest('section')?.nextElementSibling?.scrollIntoView(),
     close: () => scrollTo(0, 0),
