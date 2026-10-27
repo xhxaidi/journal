@@ -63,17 +63,3 @@ export function Marbled({ filter, shade, children }: { filter: string; shade: st
     </div>
   )
 }
-
-// torn-off ticket stub link (live site, source code)
-export function Stub({ href, kicker, title, sub, no, bg = '#E8DCC2', style }: { href?: string; kicker: string; title: string; sub: string; no: string; bg?: string; style: CSSProperties }) {
-  return (
-    <a href={href} target="_blank" rel="noreferrer" className="stub lift" style={{ position: 'absolute', display: 'flex', width: 190, height: 84, textDecoration: 'none', background: bg, color: '#1B1A17', boxShadow: '0 6px 12px rgba(40,30,10,.2)', ...style }}>
-      <span className="mono" style={{ flex: 1, padding: '10px 10px 8px 18px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-        <span style={{ fontSize: 8, letterSpacing: '.2em' }}>{kicker}</span>
-        <span style={{ fontSize: 14, fontWeight: 600, letterSpacing: '.1em' }}>{title}</span>
-        <span style={{ fontSize: 8, letterSpacing: '.14em' }}>{sub}</span>
-      </span>
-      <span className="mono" style={{ width: 38, borderLeft: '2px dashed rgba(27,26,23,.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', writingMode: 'vertical-rl', fontSize: 8, letterSpacing: '.2em' }}>{no}</span>
-    </a>
-  )
-}

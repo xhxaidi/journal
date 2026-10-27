@@ -104,5 +104,12 @@ Done:
   - series note, the fight GIF on a CRT, keycap controls, a parchment village map, pixel hearts, the villagers
   - a quest scroll with 5 ember runes, before/after gate save slots, a shellback bestiary card, game-feel notes, the README's status ("playable sketch, no sound yet")
   - game cartridge (live), floppy disk (source). The tab label uses a soft hyphen so "Ember-hollow" fits its tab.
+- **Dilli Blocks** (`src/projects/dilli.tsx`), pages 14–15, rebuilt from scratch rather than reusing the design's template:
+  - live: https://dilli.bluntbrain.com · code: https://github.com/xhxaidi/ncr-minecraft
+  - a team build, led by bluntbrain (https://github.com/bluntbrain), credited on the hackathon badge
+  - the Cyber Hub flyover as a "Greetings from" postcard with a stamp, an OpenAI Build Week lanyard badge, the in-game hotbar and controls
+  - the Connaught Place aerial with a note on the six districts, the OSM-to-voxels pipeline on a blueprint, the stack on masking tape, the challenge and decision notes, OSM attribution
+  - metro token (live), kite (source)
+  - removed the old template's `Stub` component and the `.stub`, `.num` and `.step` CSS, which nothing uses any more
 
 Not in scope: deploying to hasanzaidi.com. Add a Phase 4 if you want it.

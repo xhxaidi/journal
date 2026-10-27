@@ -26,10 +26,7 @@ a:hover { color: #C2311F }
 .tape { background: rgba(236,228,203,.66); clip-path: polygon(0 8%,4% 0,9% 10%,14% 2%,20% 9%,27% 1%,34% 8%,41% 0,48% 9%,56% 2%,63% 10%,70% 1%,77% 9%,84% 0,91% 8%,96% 1%,100% 9%,100% 92%,95% 100%,90% 91%,84% 99%,78% 90%,71% 100%,64% 92%,57% 99%,50% 90%,43% 100%,36% 91%,29% 99%,22% 90%,15% 100%,9% 92%,4% 99%,0 91%) }
 .lift { transition: transform .28s cubic-bezier(.2,.8,.2,1), filter .28s }
 .lift:hover { transform: translateY(-6px) rotate(0deg) scale(1.02) !important; filter: drop-shadow(0 10px 10px rgba(0,0,0,.25)) }
-.num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: 1.6px solid #1B1A17; background: #FBF8F0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: #1B1A17; flex: none }
-.step { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: .22em; color: #3A362F }
 .rubber { display: inline-block; padding: 6px 10px; border: 2px solid #1B1A17; border-radius: 3px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #1B1A17; opacity: .86 }
-.stub { -webkit-mask: radial-gradient(circle at 0 50%, transparent 10px, #000 10.5px) left/51% 100% no-repeat, radial-gradient(circle at 100% 50%, transparent 10px, #000 10.5px) right/51% 100% no-repeat; mask: radial-gradient(circle at 0 50%, transparent 10px, #000 10.5px) left/51% 100% no-repeat, radial-gradient(circle at 100% 50%, transparent 10px, #000 10.5px) right/51% 100% no-repeat }
 .lbl { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: .22em; color: #5A554C }
 .val { font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 600; letter-spacing: .06em; color: #1B1A17 }
 
