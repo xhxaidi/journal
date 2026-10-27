@@ -42,10 +42,21 @@ Each artboard becomes a component, in this order:
 9. **04 Back cover / contact:** boarding pass, pocket with link cards, V60 napkin, "close the journal".
 10. **06 Mobile / reduced-motion:** the tabs become a top strip, one page per screen, no 3D.
 
-To decide during Phase 2:
+Status: all 10 done. Checked in Chromium at 1440×900, 1280×720 and 390×844. That covered the loader,
+opening, arrow keys, tabs, deep link (`/#dilli`), close and replay.
 
-- Headings: Permanent Marker (main prototype) or Hidayatullah (the variant artboard, which needs its font file).
-- A portrait for the About polaroid. It stays a placeholder until you send one.
+Decisions and open items:
+
+- Headings use Permanent Marker, the main prototype's font. Hidayatullah is still possible if you send its font file.
+- The About polaroid shows a placeholder until you send a portrait.
+- Mobile shows the same 650×812 pages scaled to the screen width, not a separate mobile layout for each page.
+
+Where things live:
+
+- `src/Journal.tsx`: the engine
+- `src/pages.tsx`: the fixed pages
+- `src/projects/<id>.tsx`: one file per spread, listed in `src/projects/index.ts`
+- `src/bits.tsx`: shared pieces such as `Paper`, `Stub` and `Turn`
 
 ## Phase 3 — Projects, one at a time
 
