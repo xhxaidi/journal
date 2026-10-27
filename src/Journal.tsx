@@ -96,7 +96,7 @@ function Book() {
   }, [])
 
   useEffect(() => {
-    if (!s.intro) history.replaceState(null, '', s.opened && s.turned ? '#' + SPREADS[s.turned - 1].id : location.pathname)
+    if (!s.intro) history.replaceState(null, '', s.opened && s.turned ? '#' + SPREADS[s.turned - 1].id : location.pathname + location.search)
   }, [s.intro, s.opened, s.turned])
 
   const lo = Math.min(s.from, s.turned), hi = Math.max(s.from, s.turned), fwd = s.turned > s.from

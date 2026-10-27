@@ -84,5 +84,10 @@ Done:
   - live: https://sombra.hasanzaidi.com · code: https://github.com/xhxaidi/sombra-landing-page
   - framed ASCII black-hole print, index card, cell-foam lens, build checklist, clipped-on wallet phone, privacy receipt, quantum-fridge print, access-card links
   - media loads only when its spread is open or next to the open one (`Shot` in `src/bits.tsx`)
+- **BeanX** (`src/projects/beanx.tsx`), pages 06–07:
+  - code: https://github.com/xhxaidi/BeanX_frontend and https://github.com/xhxaidi/BeanX_backend
+  - live: not public yet. The order docket says so and doesn't link. Swap in the App Store or TestFlight URL when there is one.
+  - logo and title, the README's job line, the scan phone with a hand-drawn five-step flow, origin visa stamps from the demo passport, a coffee ring
+  - the commit timeline as a brew log, the brew-timer phone, the stack on a coffee-bag label, repo punch cards
 
 Not in scope: deploying to hasanzaidi.com. Add a Phase 4 if you want it.
