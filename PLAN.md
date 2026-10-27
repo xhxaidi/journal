@@ -1,0 +1,74 @@
+# Field Journal — build plan
+
+Design: https://claude.ai/artifact/DTED2eR3yjXuWv4z2jvYCU ("Xaidi — Field Journal Portfolio").
+A leather field journal lies on a green cutting mat. It loads, opens, and you flip through the pages.
+On desktop it's a fixed 1440×900 stage scaled to fit the window. Mobile and reduced-motion get stacked
+pages instead.
+
+**Stack:** Vite + React + TypeScript, run with Bun. Plain CSS, with no UI or animation libraries: the
+page turns are CSS 3D transitions, as in the prototype. Media is served straight from `public/`
+(`/images/<project>/…`).
+
+**Run:** `bun install`, then `bun run dev`. `bun run build` type-checks and builds to `dist/`.
+
+**Workflow:** after each phase, and after each project in Phase 3, stop. The user commits by hand and
+says "continue".
+
+## Phase 1 — Setup
+
+- [x] Vite + React + TS in the repo root (`package.json`, `index.html`, `vite.config.ts`, `tsconfig.json`, `src/main.tsx`)
+- [x] Packages: `react`, `react-dom`; dev: `vite`, `@vitejs/plugin-react`, `typescript`, `@types/react`, `@types/react-dom`
+- [x] Fonts: Caveat, Permanent Marker, IBM Plex Mono, Newsreader (Google Fonts)
+- [x] `.gitignore`: `node_modules`, `dist`
+- [x] `bun run build` passes; the dev server serves `/images/…`
+
+## Phase 2 — Design
+
+Each artboard becomes a component, in this order:
+
+1. Shared look (`src/styles.css`): mat grid, paper grain, airmail edge, washi tape, perforated stamps, ticket stubs, rubber stamps, number badges, highlighter, `.lift` hover.
+2. Stage: 1440×900, scaled to fit the window.
+3. **00 Loader:** the closed journal on the mat (mug, pen, washi rolls, grinder), with a pencil drawing the progress line.
+4. **Opening:** the elastic band slides off and the cover swings open.
+5. **Flip engine:**
+   - leaves with front and back faces, turned with a stagger, lift and shading
+   - index tabs to jump between spreads
+   - prev, next, close and replay controls
+   - page-corner hotspots and arrow keys
+   - a URL hash for each spread
+6. **01 Endpaper / P.01:** marbled endpaper, the "Property of" label, "things I built", the postmark.
+7. **02 About, P.02–03:** polaroid, name, bio, stamp links (GitHub, Email, Website), hand-drawn map.
+8. **03 Project spread template:** built as the Dilli Blocks sample, with idea, notes, execution and result, plus the GitHub and live ticket stubs.
+9. **04 Back cover / contact:** boarding pass, pocket with link cards, V60 napkin, "close the journal".
+10. **06 Mobile / reduced-motion:** the tabs become a top strip, one page per screen, no 3D.
+
+To decide during Phase 2:
+
+- Headings: Permanent Marker (main prototype) or Hidayatullah (the variant artboard, which needs its font file).
+- A portrait for the About polaroid. It stays a placeholder until you send one.
+
+## Phase 3 — Projects, one at a time
+
+For each project:
+
+1. You pick the project, and I ask you to paste its **GitHub link** and **live link**.
+2. I build its spread with an arrangement of its own, different from the other spreads. It gets scribbles, sticky notes, tickets and project notes (idea, notes, build, result), plus its media from `public/images/<project>/`.
+3. Every project page shows both links. That's required.
+4. I add its tab to the index and check the build.
+5. I stop. You commit, then say "continue".
+
+Candidates:
+
+- Dilli Blocks (`dilli`)
+- BeanX (`beanx`)
+- Sombra (`sombra`)
+- Pixel Dance 2B (`2b-animation`)
+- Pixel Court (`basketball`)
+- Emberhollow (`test-game`)
+- Intertwine and tether: in the design's tabs, but no media yet
+
+Done:
+
+- (none yet)
+
+Not in scope: deploying to hasanzaidi.com. Add a Phase 4 if you want it.
