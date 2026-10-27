@@ -50,7 +50,7 @@ Decisions and open items:
 - With no `#hash` in the URL, the journal opens on About. The desktop cover opens straight to P. 02–03, and mobile scrolls to About. A hashed link still opens its own spread.
 
 - Headings use Permanent Marker, the main prototype's font. Hidayatullah is still possible if you send its font file.
-- The About polaroid shows a placeholder until you send a portrait.
+- The About polaroid shows `public/images/about/look-what-ive-cooked.jpg`, captioned "look what I've cooked".
 - Mobile shows the same 650×812 pages scaled to the screen width, not a separate mobile layout for each page.
 
 Where things live:

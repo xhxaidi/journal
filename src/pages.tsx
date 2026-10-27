@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
-import { at, Marbled, Paper, Turn } from './bits'
+import { at, Marbled, Paper, Shot, Turn } from './bits'
 
 const EMAIL = 'xhxaidi@gmail.com'
 const GITHUB = 'https://github.com/xhxaidi'
@@ -85,10 +85,8 @@ export function AboutLeft({ n }: { n: number }) {
     <Paper side="left" n={n}>
       <div className="mono" style={at(388, 84, { fontSize: 11, letterSpacing: '.24em', color: '#3A362F' })}>27 OCT 2026</div>
       <div className="lift" style={at(92, 104, { width: 300, padding: '14px 14px 58px', boxSizing: 'border-box', background: '#FDFBF6', transform: 'rotate(-3deg)', boxShadow: '0 1px 1px rgba(0,0,0,.12), 0 8px 18px rgba(40,30,10,.22)' })}>
-        <div style={{ height: 340, background: 'linear-gradient(160deg, #8C7A63, #4E4336 60%, #2F2822)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span className="mono" style={{ fontSize: 11, letterSpacing: '.2em', color: '#EDE5D6' }}>[ YOUR PORTRAIT · 4:5 ]</span>
-        </div>
-        <div className="hand" style={{ position: 'absolute', left: 22, bottom: 12, fontSize: 26, color: '#3A362F' }}>me, mid-deploy</div>
+        <Shot src="/images/about/look-what-ive-cooked.jpg" alt="Hasan, grinning, holding up two dark wooden boards" style={{ width: 272, height: 340, background: '#E9E4DA' }} />
+        <div className="hand" style={{ position: 'absolute', left: 22, bottom: 12, fontSize: 26, color: '#3A362F' }}>look what I've cooked</div>
       </div>
       <div aria-hidden="true" className="tape" style={at(186, 88, { width: 120, height: 34, transform: 'rotate(4deg)' })} />
       <h2 className="marker" style={at(70, 548, { margin: 0, fontSize: 82, fontWeight: 400, lineHeight: 0.9, color: '#C2311F', transform: 'rotate(-2deg)' })}>Hasan<br />Zaidi</h2>
@@ -122,8 +120,9 @@ export function AboutRight({ n }: { n: number }) {
       <div className="hand" style={at(72, 76, { width: 520, fontSize: 26, lineHeight: 1.22 })}>
         <p style={{ margin: '0 0 14px', fontSize: 40, fontWeight: 700 }}>hi —</p>
         <p style={{ margin: '0 0 14px' }}>I'm a CS undergrad at <span className="hl">AMU</span>, and alongside that I'm working through the <span className="hl">IIT Madras BS</span> in Data Science.</p>
-        <p style={{ margin: '0 0 14px' }}>I build <span className="hl">full-stack</span> apps and, more and more, I do <span className="hl">AI engineering</span>: agents, local-first tools, small things that feel fast.</p>
-        <p style={{ margin: 0 }}>Before this: Telus International, and organising GDG On Campus. Now looking for internships and junior roles building AI products.</p>
+        <p style={{ margin: '0 0 14px' }}>I build <span className="hl">full-stack</span> apps.</p>
+        <p style={{ margin: '0 0 14px' }}>Full-stack developer, crazy about <span className="hl">great design</span>, and a <span className="hl">coffee connoisseur</span>.</p>
+        <p style={{ margin: 0 }}>Now looking for internships and junior roles building AI products.</p>
       </div>
       <div style={at(66, 566, { display: 'flex', gap: 18, alignItems: 'flex-start' })}>
         <Stamp href={GITHUB} bg="#1D3F8F" fg="#F2EDE3" kicker="POSTE · 01" label="GitHub" rot={-4}>

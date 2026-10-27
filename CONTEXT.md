@@ -30,6 +30,14 @@ Embed from another repo's README:
 
 ---
 
+## About page (`about`)
+
+Media for the journal site's own About spread, not a project.
+
+| File | Shows | Captured |
+|---|---|---|
+| `public/images/about/look-what-ive-cooked.jpg` | Hasan grinning, holding up two dark wooden boards, white boxes stacked behind | iPhone 13 photo `lookwhaticooked.HEIC` (4032×3024), rotated upright, cropped 4:5 around the subject, 816×1020 JPEG at quality 82. All metadata removed, including the original's GPS location |
+
 ## Projects
 
 <!-- one section per project; keep the table format -->

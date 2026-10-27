@@ -217,8 +217,8 @@ function Book() {
 
           {/* click the closed journal to open it */}
           {!s.opened && s.band && <>
-            <button onClick={open} aria-label="Open the journal" style={at(430, 150, { width: 470, height: 590, background: 'none', border: 0, cursor: 'pointer' })} />
-            <div className="hand" style={at(960, 420, { fontSize: 30, color: '#F2EDE3', transform: 'rotate(-6deg)', pointerEvents: 'none' })}>{s.intro && s.progress >= 100 ? 'opening…' : 'tap to open →'}</div>
+            <button onClick={open} tabIndex={-1} aria-hidden="true" style={at(430, 150, { width: 470, height: 590, background: 'none', border: 0, cursor: 'pointer' })} />
+            <button className="hand" onClick={open} style={at(960, 420, { fontSize: 30, color: '#F2EDE3', background: 'none', border: 0, padding: 0, cursor: 'pointer', transform: 'rotate(-6deg)' })}>{s.intro && s.progress >= 100 ? 'opening…' : 'tap to open →'}</button>
           </>}
 
           {/* controls */}
