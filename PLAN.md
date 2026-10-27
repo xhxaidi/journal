@@ -89,5 +89,10 @@ Done:
   - live: not public yet. The order docket says so and doesn't link. Swap in the App Store or TestFlight URL when there is one.
   - logo and title, the README's job line, the scan phone with a hand-drawn five-step flow, origin visa stamps from the demo passport, a coffee ring
   - the commit timeline as a brew log, the brew-timer phone, the stack on a coffee-bag label, repo punch cards
+- **Pixel Dance (2B)** (`src/projects/2b-animation.tsx`), pages 08–09:
+  - live: https://2b.hasanzaidi.com/ · code: https://github.com/xhxaidi/2B-animation
+  - series note, the fight GIF on a 35mm film strip, an X-sheet of the beats with their sound cues
+  - the robot-cam GIF in a viewfinder, a backflip pose sketch, a parts list, a Bayer dither swatch
+  - clapperboard (live), film canister (source), fan-art notice
 
 Not in scope: deploying to hasanzaidi.com. Add a Phase 4 if you want it.
