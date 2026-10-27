@@ -99,5 +99,10 @@ Done:
   - series note, the fight GIF on a 35mm film strip, an X-sheet of the beats with their sound cues
   - the robot-cam GIF in a viewfinder, a backflip pose sketch, a parts list, a Bayer dither swatch
   - clapperboard (live), film canister (source), fan-art notice
+- **Emberhollow** (`src/projects/test-game.tsx`), pages 12–13, finishing the series:
+  - live: https://emberhollow.hasanzaidi.com/ · code: https://github.com/xhxaidi/test-rpg-game
+  - series note, the fight GIF on a CRT, keycap controls, a parchment village map, pixel hearts, the villagers
+  - a quest scroll with 5 ember runes, before/after gate save slots, a shellback bestiary card, game-feel notes, the README's status ("playable sketch, no sound yet")
+  - game cartridge (live), floppy disk (source). The tab label uses a soft hyphen so "Ember-hollow" fits its tab.
 
 Not in scope: deploying to hasanzaidi.com. Add a Phase 4 if you want it.
