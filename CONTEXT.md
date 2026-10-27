@@ -133,6 +133,8 @@ brew timer, and log every cup to a passport with a map and a shareable recipe ca
 
 | File | Shows | Captured |
 |---|---|---|
+| `public/images/beanx/logo.png` | BeanX app icon: a cherry-red line-art pour-over brewer on a cream square, with the dripper and carafe forming an X and a coffee bean in the base | Copied from `frontend/assets/images/logo.png` (the `icon` in app.json), 2000×2000, no transparency |
+| `public/images/beanx/logo-mark.png` | The same mark on a transparent background, for placing over any colour | Copied from `frontend/assets/images/logo-mark.png` (used in-app by `BeanXMark` in `src/ds/icons.tsx`), 1683×1683 with transparency |
 | `public/images/beanx/scan-to-recipe.gif` | The Brew tab's "Scan your beans", the camera viewfinder, the scan sweep, the detected-bean card (Yirgacheffe Konga, flavor tags) with method chips, "Brew it with V60", then the recipe card (dose, water, temperature, grind, time) | `frontend://brew`, then the scan button, shutter and V60. 440×956, 15fps, 8.1s, loops |
 | `public/images/beanx/brew-timer.gif` | The guided brew session: dial timer counting 0:40 to 0:47, the step auto-advancing from Bloom (33g) to First pour (150g), the progress bar filling | `frontend://brew-guide?id=e-yirgacheffe-konga&autostart=1`. 440×956, 15fps, 8.0s, loops |
 | `public/images/beanx/passport.png` | Passport, "Sam's brew log": stat tiles (brews, favorite method, average rating), bean entry cards with ratings and flavor tags, the Liquid Glass tab bar | `frontend://passport`, 603×1311 (half of the 1206×2622 native size) |

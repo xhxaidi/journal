@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git commit *)",
+      "Bash(git add *)",
+      "Bash(git push *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(git cherry-pick *)",
+      "Bash(git revert *)"
+    ]
+  }
+}
