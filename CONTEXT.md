@@ -38,6 +38,17 @@ Media for the journal site's own About spread, not a project.
 |---|---|---|
 | `public/images/about/look-what-ive-cooked.jpg` | Hasan grinning, holding up two dark wooden boards, white boxes stacked behind | iPhone 13 photo `lookwhaticooked.HEIC` (4032×3024), rotated upright, cropped 4:5 around the subject, 816×1020 JPEG at quality 82. All metadata removed, including the original's GPS location |
 
+## Journal site (`journal`)
+
+Media for the journal site itself: its share card and a product demo in the style of a Screen Studio recording.
+
+| File | Shows | Captured |
+|---|---|---|
+| `public/images/journal/og.jpg` | The link-preview card (`og:image` in `index.html`): an open journal spread on the green mat. The left page has "Hasan Zaidi" in red marker, the "Full-stack developer, crazy about great design…" line and the six projects as coloured chips. The right page has the About polaroid, "a field journal of things I built", the URL and a postmark | A standalone HTML card using the site's fonts, mat, paper, airmail edge and index-tab colours, with `about/look-what-ive-cooked.jpg` as the photo. Rendered by Playwright at 1200×630 and saved as JPEG at quality 86 (119KB). Kept small because WhatsApp drops large preview images |
+| `public/videos/journal/field-journal-demo.mp4` | 50s tour in a dark Chrome window on a purple wallpaper. It starts tight on the pencil loader, clicks "tap to open", and pulls back as the cover swings open. Then P.01 and About, then every project spread, turned by tab, arrow key (with a key badge) and page corner. It ends on Contact, where CLOSE riffles every page shut. The URL bar follows each spread's `#hash`. Zoom-follow camera, a big macOS cursor with click ripples, motion blur. Sound is an original chiptune-pop track under synthesized click and page-turn sounds. The track runs at 121.4 BPM so the drop lands on the "tap to open" click and bar 22 on CLOSE, with the final chord as the riffle lands | The `bun run preview` build in headless Chromium at 1440×900, with screenshots at 2× (2880×1800) on a virtual clock at 60fps. An init script fakes the timers, pins every CSS transition to that clock, and draws each GIF's frames itself with `ImageDecoder` so they play at true speed. Composited in Python (PIL + numpy) to 1920×1080 · 60fps · H.264 CRF 18. Music synthesized in numpy (no samples, no licence needed), loudness-normalized to -14 LUFS, AAC 192k (44MB) |
+
+The demo closes the book with the bottom CLOSE control because the Contact page's own "close the journal" can't be clicked yet. The back page sits at `translateZ(-1px)`, behind the book's 3D plane, which takes the clicks.
+
 ## Projects
 
 <!-- one section per project; keep the table format -->
